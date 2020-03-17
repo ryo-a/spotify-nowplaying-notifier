@@ -1,0 +1,13 @@
+{
+  "name": "Spotify Now Playing Notifier",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "nowplaying",
+  "content_scripts": [
+    {
+      "matches": ["https://open.spotify.com/*"],
+      "js": ["script.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
