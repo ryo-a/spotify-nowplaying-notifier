@@ -1,12 +1,23 @@
 {
-  "name": "Spotify Now Playing Notifier",
+  "name": "Now Playing Notifier for Spotify",
   "version": "0.0.1",
   "manifest_version": 2,
   "description": "nowplaying",
+  "permissions": [
+    "notifications",
+    "alarms"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
   "content_scripts": [
     {
-      "matches": ["https://open.spotify.com/*"],
-      "js": ["script.js"],
+      "matches": [
+        "https://open.spotify.com/*"
+      ],
+      "js": [
+        "script.js"
+      ],
       "run_at": "document_start"
     }
   ]
