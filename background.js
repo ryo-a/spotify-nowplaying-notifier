@@ -1,12 +1,14 @@
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  let nowPlaying = request.nowPlaying;
-  chrome.notifications.create('nowmusic', {
+  let music = request.music;
+  let artist = request.artist;
+  let notificationName = 'nowplaying'+music+artist;
+  chrome.notifications.create(notificationName, {
     type: 'basic',
-    title: 'Now Playing on Spotify',
+    title: `${music} (${artist})`,
     iconUrl:'icon/128x128.png',
-    message: nowPlaying,
+    message: 'Now Playing on Spotify',
     silent:true
   });
-  chrome.notifications.clear('nowmusic');
+  chrome.notifications.clear(notificationName);
   return true;
 });
