@@ -9,6 +9,5 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     message: 'Now Playing on Spotify',
     silent:true
   });
-  chrome.notifications.clear(notificationName);
   return true;
 });

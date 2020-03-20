@@ -13,7 +13,7 @@
   ],
   "background": {
     "scripts": [
-      "background.js"
+      "js/background.js"
     ]
   },
   "content_scripts": [
@@ -22,7 +22,7 @@
         "https://open.spotify.com/*"
       ],
       "js": [
-        "script.js"
+        "js/script.js"
       ],
       "run_at": "document_start"
     }
