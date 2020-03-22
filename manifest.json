@@ -22,7 +22,7 @@
         "https://open.spotify.com/*"
       ],
       "js": [
-        "js/script.js"
+        "js/pagescript.js"
       ],
       "run_at": "document_start"
     }
